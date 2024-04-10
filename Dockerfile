@@ -12,7 +12,7 @@ WORKDIR /usr/src/myapp
 RUN mvn package
 
 # Используем образ Java для запуска
-FROM openjdk:20
+FROM openjdk:17
 
 # Копируем собранный jar-файл из предыдущего образа
 COPY --from=build /usr/src/myapp/target/ThymeleafProject-0.0.1-SNAPSHOT.jar /usr/app/ThymeleafProject-0.0.1-SNAPSHOT.jar
