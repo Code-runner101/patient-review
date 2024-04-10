@@ -1,0 +1,106 @@
+        h1, h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            margin: 0 auto; /* Выравнивание по горизонтали по центру */
+            width: 50%;
+            text-align: center; /* Выравнивание содержимого по центру */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="time"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            font-size: 26px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding-top: 50px; /* Добавьте верхний отступ */
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        input[type="password"],
+        input[type="text"],
+        input[type="date"] {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px; /* Скругление углов */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .content {
+            width: 50%; /* Уменьшите это значение, чтобы сжать форму */
+            margin: 0 auto; /* Выравнивание по горизонтали по центру */
+        }
+
+        .login-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .username {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #f8f9fa; /* Цвет фона */
+            padding: 5px 10px; /* Отступы внутри элемента */
+            border-radius: 5px; /* Скругление углов */
+        }

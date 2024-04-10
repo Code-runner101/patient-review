@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Пациенты</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
+</head>
+<body>
+<h1>Пациенты</h1>
+<table>
+  <tr>
+    <th>Имя пациента</th>
+    <th>Имя врача</th>
+    <th>Время приема</th>
+    <th>Дата приема</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr th:each="patient, stat : ${patients}">
+    <td th:text="${patient.pat_name}"></td>
+    <td th:text="${patient.doc_name}"></td>
+    <td th:text="${patient.time}"></td>
+    <td th:text="${patient.date}"></td>
+    <td>
+      <form th:action="@{/patients/{id}(id=${patient.id})}" th:method="post">
+        <input type="submit" value="Удалить">
+      </form>
+    </td>
+    <td>
+      <form th:action="@{/patients/{id}(id=${patient.id})}" th:method="get">
+        <input type="submit" value="Подробнее">
+      </form>
+    </td>
+  </tr>
+</table>
+
+<h2>Добавить пациента</h2>
+<form th:action="@{/patients}" method="post">
+  <input type="text" name="pat_name" placeholder="Имя пациента" required>
+  <input type="text" name="doc_name" placeholder="Имя врача" required>
+  <input type="text" name="time" placeholder="Время приема" required>
+  <input type="date" name="date" placeholder="Дата приема" required>
+  <div style="display: flex; justify-content: center;">
+    <input type="submit" value="Добавить">
+  </div>
+</form>
+</body>
+</html>

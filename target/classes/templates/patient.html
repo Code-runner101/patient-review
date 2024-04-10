@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Пациент</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
+</head>
+<body>
+<h1>Пациент</h1>
+<p><strong>Имя пациента:</strong> <span th:text="${patient.pat_name}"></span></p>
+<p><strong>Имя врача:</strong> <span th:text="${patient.doc_name}"></span></p>
+<p><strong>Время приема:</strong> <span th:text="${patient.time}"></span></p>
+<p><strong>Дата приема:</strong> <span th:text="${patient.date}"></span></p>
+<a href="/patients">Вернуться к списку пациентов</a>
+</body>
+</html>
