@@ -1,5 +1,5 @@
 # Используйте образ Maven как базовый образ
-FROM maven:3.8.1-openjdk-11 as build
+FROM maven:3.8.1-openjdk-17 as build
 
 # Копируем исходный код в контейнер
 COPY src /usr/src/myapp/src
